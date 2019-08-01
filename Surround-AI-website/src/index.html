@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Surround AI</title>
+
+    <!-- Adding ReactJS library -->
+    <!-- For development -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- <script src="js/header.js" type="text/babel"></script> -->
+
+    <!-- For production -->
+    <!-- <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script> -->
+
+    <!-- Adding css Bulma library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+    <!-- This is the header. -->
+    <div id="header" class="header">
+
+    </div>
+
+    <script type="text/babel">
+        class Header extends React.Component {
+            render() {
+                return (
+                    <header>
+                        <nav className="level">
+                            <p className="level-item has-text-centered">
+                                <a className="link is-info">Home</a>
+                            </p>
+                            <p className="level-item has-text-centered">
+                                <a className="link is-info">Documentation</a>
+                            </p>
+                            <p className="level-item has-text-centered">
+                                <a className="link is-info">Blog</a>
+                            </p>
+                            <p className="level-item has-text-centered">
+                                <a className="link is-info">Git</a>
+                            </p>
+                            <p className="level-item has-text-centered">
+                                <a className="link is-info">FAQ</a>
+                            </p>
+                        </nav>
+                    </header>
+                );
+            }
+        }
+
+        let domContainer = document.querySelector('#header');
+        ReactDOM.render(<Header />, domContainer);
+    </script>
+
+    <!-- This is the main body. -->
+    <div id="main_body">
+            <div class="tile is-ancestor">
+                    <div class="tile is-vertical is-8">
+                      <div class="tile">
+                        <div class="tile is-parent is-vertical">
+                          <article class="tile is-child notification is-primary">
+                            <p class="title">Vertical...</p>
+                            <p class="subtitle">Top tile</p>
+                          </article>
+                          <article class="tile is-child notification is-warning">
+                            <p class="title">...tiles</p>
+                            <p class="subtitle">Bottom tile</p>
+                          </article>
+                        </div>
+                        <div class="tile is-parent">
+                          <article class="tile is-child notification is-info">
+                            <p class="title">Middle tile</p>
+                            <p class="subtitle">With an image</p>
+                            <figure class="image is-4by3">
+                              <img src="https://bulma.io/images/placeholders/640x480.png">
+                            </figure>
+                          </article>
+                        </div>
+                      </div>
+                      <div class="tile is-parent">
+                        <article class="tile is-child notification is-danger">
+                          <p class="title">Wide tile</p>
+                          <p class="subtitle">Aligned with the right tile</p>
+                          <div class="content">
+                            <!-- Content -->
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                    <div class="tile is-parent">
+                      <article class="tile is-child notification is-success">
+                        <div class="content">
+                          <p class="title">Tall tile</p>
+                          <p class="subtitle">With even more content</p>
+                          <div class="content">
+                            <!-- Content -->
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+    </div>
+
+
+    <!-- This is the footer. -->
+    <div id="footer">
+        <footer class="footer">
+            <nav class="level">
+                <p class="level-item has-text-centered">
+                    <a class="link is-info">About</a>
+                </p>
+                <p class="level-item has-text-centered">
+                    <a class="link is-info">Contact us</a>
+                </p>
+                <p class="level-item has-text-centered">
+                    <a class="link is-info">Contributors</a>
+                </p>
+                <p class="level-item has-text-centered">
+                    <a class="link is-info">Career</a>
+                </p>
+                <p class="level-item has-text-centered">
+                    <a class="link is-info">Subscribe</a>
+                </p>
+            </nav>
+        </footer>
+    </div>
+</body>
+
+</html>
